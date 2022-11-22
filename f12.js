@@ -1,20 +1,28 @@
-// 禁止按F12调试
-document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
-	var e = event || window.event || arguments.callee.caller.arguments[0];
-	if (e && e.keyCode == 123) {
-		mAlert();
-		e.returnValue = false;
-		return (false);
-	}
-}
-function mAlert() {
-	alert("F12开发者工具已禁用，如需管理网站，请与管理员联系！");
-}
-
-// 防止鼠标右键浏览器‘检查’操作
-setInterval(function () {
-	debugger;
-}, 100)
-
-// 禁止右键
-document.oncontextmenu = function () { return false; };
+document.oncontextmenu = new Function("event.returnValue=false;");
+document.onselectstart = new Function("event.returnValue=false;");
+window.onload = function () {
+	document.onkeydown = function (){
+			var e = window.event || arguments[0];
+			//F12
+			if(e.keyCode == 123){
+				return false;
+			//Ctrl+Shift+I
+			}else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+				return false;
+			//Ctrl+Shift+C
+			}else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 67)){
+				return false;
+			//Shift+F10
+			}else if((e.shiftKey) && (e.keyCode == 121)){
+				return false;
+			//Ctrl+U
+			}else if((e.ctrlKey) && (e.keyCode == 85)){
+				return false;
+			//Ctrl+S
+			}else if((e.ctrlKey) && (e.keyCode == 83)){
+			return false;
+		}
+	};
+		document.oncontextmenu = function (){
+			return false;
+		}
