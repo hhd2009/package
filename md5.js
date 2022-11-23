@@ -199,7 +199,3 @@ var md5_encode = function (string) {
 
     return temp.toLowerCase();
 }
-//demo里的文件原来是没有这段的
-module.exports = {
-    md5: md5
-} 
