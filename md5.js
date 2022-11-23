@@ -201,5 +201,5 @@ var md5_encode = function (string) {
 }
 //demo里的文件原来是没有这段的
 module.exports = {
-    MD5: MD5
+    md5: md5
 } 
