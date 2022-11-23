@@ -1,4 +1,4 @@
-function setCookie(name, value, daysToLive) {
+function set_cookie(name, value, daysToLive) {
     // 对 cookie 值进行编码以转义其中的分号、逗号和空格
     var cookie = name + "=" + encodeURIComponent(value);
    
@@ -9,7 +9,7 @@ function setCookie(name, value, daysToLive) {
     document.cookie = cookie;
 }
 
-function getCookie(name) {
+function get_cookie(name) {
     // 拆分 cookie 字符串
     var cookieArr = document.cookie.split(";");
    
@@ -27,7 +27,7 @@ function getCookie(name) {
     return null;
 }
 
-function delCookie(name) {
+function del_cookie(name) {
     var cookie = name + "=" + null; 
     cookie += "; max-age=0";
     document.cookie = cookie;
