@@ -1,4 +1,4 @@
-function md5(a) {
+function md5_encode(a) {
     function b(a, b) {
         return a << b | a >>> 32 - b
     }
