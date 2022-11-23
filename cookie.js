@@ -28,8 +28,5 @@ function get_cookie(name) {
 }
 
 function del_cookie(name) {
-    var cookie = name + "=" + null; 
-    cookie += "; path=/"
-    cookie += "; max-age=0";
-    document.cookie = cookie;
+    set_cookie(name,null,-1)
 }
