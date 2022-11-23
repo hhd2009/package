@@ -8,6 +8,7 @@ function setCookie(name, value, daysToLive) {
     }
     document.cookie = cookie;
 }
+
 function getCookie(name) {
     // 拆分 cookie 字符串
     var cookieArr = document.cookie.split(";");
@@ -24,4 +25,10 @@ function getCookie(name) {
     }
     // 如果未找到，则返回null
     return null;
+}
+
+function delCookie(name) {
+    var cookie = name + "=" + null; 
+    cookie += "; max-age=0";
+    document.cookie = cookie;
 }
