@@ -28,5 +28,5 @@ function get_cookie(name) {
 }
 
 function del_cookie(name) {
-    set_cookie(name,null,-1)
+    set_cookie(name,null,"0")
 }
