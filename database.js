@@ -1,12 +1,15 @@
 var fso, f1, ts, s
-var ForReading = 1
 fso = new ActiveXObject("Scripting.FileSystemObject")
+
 // 创建文件
 function create_file(name){
   fso.CreateTextFile(name, true)
 }
+
 // 填写一行数据
-f1.WriteLine("Hello World")
+function write_file(name,msg){
+  fso.OpenTextFile(name,1).Write(msg)
+}
 f1.WriteBlankLines(1)
 // 关闭文件
 f1.Close()
