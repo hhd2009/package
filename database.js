@@ -1,5 +1,4 @@
-var fso, f1, ts, s
-fso = new ActiveXObject("Scripting.FileSystemObject")
+var fso = new ActiveXObject("Scripting.FileSystemObject")
 
 // 创建文件
 function create_file(name){
@@ -8,7 +7,9 @@ function create_file(name){
 
 // 填写一行数据
 function write_file(name,msg){
-  fso.OpenTextFile(name,1).Write(msg)
+  var f=fso.OpenTextFile(name,1,true)
+  f.Write(msg)
+  f.Close()
 }
 f1.WriteBlankLines(1)
 // 关闭文件
