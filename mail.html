@@ -4,17 +4,17 @@
 const nodemailer = require('nodemailer');
 
 /**
- * 发送163邮件
+ * 发送邮件
  */
 async function sendEmail(reader,subject,text,mode) {
   // 配置邮件服务器
   let transporter = nodemailer.createTransport({
-    host: "smtp.163.com",
+    host: "smtp.office365.com",
     port: 25,
     secure: false,
     auth: {
-      user: 'handongliren@163.com',
-      pass: '密码或授权码',
+      user: 'handongliren2009@hotmail.com',
+      pass: 'he201617',
     },
   });
 
