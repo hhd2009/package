@@ -1,0 +1,21 @@
+<script>
+const nodemailer = require('nodemailer');
+function sendMail(send,pass,receive,subject,text){
+  let transporter = nodemailer.createTransport({
+    host:'smtp.qq.com',
+    port:587,
+    secure: false,
+    auth:{
+      user:send,
+      pass:pass
+    }
+  })
+  let info = await transporter.sendMail({
+    from: `发送人<${send}>`,
+    to: `接收人<${receive}>`,
+    subject:subject,
+    text:text
+  })
+}
+
+</script>
