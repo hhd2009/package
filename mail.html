@@ -13,7 +13,7 @@ async function sendEmail(reader,subject,text,mode) {
     port: 587,
     secure: false,
     auth: {
-      user: 'handongliren2009@hotmail.com',
+      user: 'hehandong2009@hotmail.com',
       pass: 'he201617',
     },
   });
@@ -21,14 +21,14 @@ async function sendEmail(reader,subject,text,mode) {
   // 发送邮件
   if(mode="text"){
     let info = await transporter.sendMail({
-    from: '寒冬利刃的网站 <from handonglliren2009@hotmail.com>',
+    from: '寒冬利刃的网站 <from hehandong2009@hotmail.com>',
     to: `to${reader}`,
     subject: subject,
     text: text
     })}
   else if(mode="html"){
     let info = await transporter.sendMail({
-    from: '寒冬利刃的网站 <from handonglliren2009@hotmail.com>',
+    from: '寒冬利刃的网站 <from hehandongl2009@hotmail.com>',
     to: `to${reader}`,
     subject: subject,
     html: text
