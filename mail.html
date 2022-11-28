@@ -26,9 +26,13 @@ async function sendEmail(reader,subject,text) {
     subject: subject,
     text: text
     })}
-    else if
-    html: "<b>HTML邮件内容</b>",
-
+  else if(mode="html"){
+    let info = await transporter.sendMail({
+    from: '寒冬利刃的网站 <from handonglliren@163.com>',
+    to: `to${reader}`,
+    subject: subject,
+    html: text
+    })}
 
 sendEmail();
 </script>
