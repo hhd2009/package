@@ -1,4 +1,4 @@
-# 本网站（hhd2009.github.io）仅提供储存，版权归原作者所有。
+# 本网站（https://hhd2009.github.io ）仅提供储存，版权归原作者所有。
 ﻿CryptoJS
 --------
 
