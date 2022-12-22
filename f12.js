@@ -25,8 +25,7 @@ window.onload = function () {
             }
             open = true;
             window.stop();
-            alert('没事别老研究人家接口');
-            document.body.innerHTML="";
+            window.location.href="\\./hc/anti_debug"
         } else {
             open = false;
         }
