@@ -1,6 +1,39 @@
 document.oncontextmenu = new Function("event.returnValue=false;");
 document.onselectstart = new Function("event.returnValue=false;");
 window.onload = function () {
+((function () {
+    var callbacks = [], timeLimit = 50, open = false;
+    setInterval(loop, 1);
+    return {
+        addListener: function (fn) {
+            callbacks.push(fn);
+        },
+        cancleListenr: function (fn) {
+            callbacks = callbacks.filter(function (v) {
+                return v !== fn;
+            });
+        }
+    }
+    function loop() {
+        var startTime = new Date();
+        debugger;
+        if (new Date() - startTime > timeLimit) {
+            if (!open) {
+                callbacks.forEach(function (fn) {
+                    fn.call(null);
+                });
+            }
+            open = true;
+            window.stop();
+            alert('没事别老研究人家接口');
+            document.body.innerHTML="";
+        } else {
+            open = false;
+        }
+    }
+})()).addListener(function () {
+    window.location.reload();
+});
 	document.onkeydown = function (){
 			var e = window.event || arguments[0];
 			//F12
