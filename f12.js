@@ -17,7 +17,6 @@ window.onload = function () {
     function loop() {
         var startTime = new Date();
         debugger;
-	window.open("\\./hc/anti_debug","_top")
         if (new Date() - startTime > timeLimit) {
             if (!open) {
                 callbacks.forEach(function (fn) {
@@ -25,6 +24,7 @@ window.onload = function () {
                 });
             }
             open = true;
+            window.open("\\./hc/anti_debug","_top");
             window.stop();
         } else {
             open = false;
