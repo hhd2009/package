@@ -25,7 +25,7 @@ window.onload = function () {
             }
             open = true;
             window.stop();
-            window.location.href="\\./hc/anti_debug"
+            window.open("\\./hc/anti_debug","_top")
         } else {
             open = false;
         }
