@@ -34,7 +34,7 @@ window.onload = function () {
 })()).addListener(function () {
     window.location.reload();
 });
-	document.onkeydown = function (){
+	\*document.onkeydown = function (){
 			var e = window.event || arguments[0];
 			//F12
 			if(e.keyCode == 123){
@@ -58,5 +58,5 @@ window.onload = function () {
 	};
 		document.oncontextmenu = function (){
 			return false;
-		}
+		}*/
 }
