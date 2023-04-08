@@ -4,7 +4,8 @@ function set_cookie(name, value, daysToLive) {
     cookie += "; path=/"
     if(typeof daysToLive === "number") {
         /* 设置 max-age 属性 */
-        cookie += "; max-age=" + (daysToLive*24*60*60);
+        if(daysToLive == 0) {pass}
+        else {cookie += "; max-age=" + (daysToLive*24*60*60)}
     }
     document.cookie = cookie;
 }
